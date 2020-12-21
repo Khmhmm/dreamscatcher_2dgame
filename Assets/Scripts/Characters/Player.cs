@@ -32,6 +32,8 @@ public class Player : MonoBehaviour, ICharacter
 
     void FixedUpdate()
     {
+        // NOTE: debug feature
+        // if (Input.GetMouseButton(0) || true){
         if (Input.GetMouseButton(0)){
             if (!blockDelay){
                 // stops last coroutine to avoid blockDelay reset
@@ -39,6 +41,7 @@ public class Player : MonoBehaviour, ICharacter
                 blockDelay = true;
                 isStopped = true;
                 StartCoroutine("Block");
+                StartCoroutine("ReplaceIdealBlock");
             }
             blockTime += Time.fixedDeltaTime;
             if (blockTime > 0.25f){
@@ -102,6 +105,7 @@ public class Player : MonoBehaviour, ICharacter
     IEnumerator Block(){
         yield return new WaitForFixedUpdate();
         this.destroyer.SetActive(true);
+        this.destroyer.GetComponent<Destroyer>().WakeUp();
         yield return new WaitForSeconds(this.GetComponent<Animator>().GetAnimatorTransitionInfo(0).duration);
         yield return new WaitForFixedUpdate();
         yield return new WaitForSeconds(this.GetComponent<Animator>().GetAnimatorTransitionInfo(0).duration);
@@ -116,5 +120,10 @@ public class Player : MonoBehaviour, ICharacter
         this.destroyer.SetActive(false);
         this.blockDelay = false;
         this.blockTime = 0f;
+    }
+
+    IEnumerator ReplaceIdealBlock(){
+        yield return new WaitForSeconds(0.2f);
+        this.destroyer.GetComponent<Destroyer>().idealBlock = false;
     }
 }

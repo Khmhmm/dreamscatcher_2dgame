@@ -3,14 +3,30 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Destroyer : MonoBehaviour{
-    // contains prefab of the effect which will be spawned when destroying something
+    // contains prefab of the effects
     public GameObject fx;
     public GameObject lastfx;
     public bool continuingBlock=false;
     [SerializeField]private bool isBlockAffects = true;
+    public bool idealBlock = true;
 
-    void Awake(){
+    public void WakeUp(){
         isBlockAffects = true;
+        idealBlock = true;
+
+        // cheks if this effect's prefab was assigned and will be deleted from scene
+        if( fx != null && fx.GetComponent<DestroyFX>() != null){
+            if(lastfx != null){
+                if(continuingBlock){
+                    lastfx.GetComponent<DestroyFX>().prohibitDestroy = true;
+                }
+                else{
+                    DestroyLastFx();
+                }
+            }
+            lastfx = Instantiate(fx, transform.position + new Vector3(1f, 1f, 0f), Quaternion.Euler(0f,0f,0f));
+            lastfx.transform.parent = this.transform;
+        }
     }
 
     void LateUpdate(){
@@ -25,22 +41,17 @@ public class Destroyer : MonoBehaviour{
     //Destroys everything what collides except of player
     void OnTriggerEnter(Collider col){
         var gObj = col.gameObject;
-        if(gObj.tag != "Player" && isBlockAffects) {
+        if(gObj.tag != "Player" && gObj.tag != "Undestroyable" && isBlockAffects) {
             Destroy(gObj);
         }
+    }
 
-        // cheks if this effect will be deleted from scene
-        if( fx != null && fx.GetComponent<DestroyFX>() != null){
-            if(lastfx != null){
-                if(continuingBlock){
-                    lastfx.GetComponent<DestroyFX>().prohibitDestroy = true;
-                }
-                else{
-                    DestroyLastFx();
-                }
+    void OnTriggerStay(Collider col){
+        var gObj = col.gameObject;
+        if(gObj.tag != "Player") {
+            if(!idealBlock){
+                transform.parent.GetComponent<Player>().Move(Vector3.left);
             }
-            lastfx = Instantiate(fx, transform.position + new Vector3(1f, 1f, 0f), Quaternion.Euler(0f,0f,0f));
-            lastfx.transform.parent = this.transform;
         }
     }
 
