@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 107499552}
   - component: {fileID: 107499556}
   - component: {fileID: 107499555}
+  - component: {fileID: 107499557}
   m_Layer: 0
   m_Name: forestevil
   m_TagString: Untagged
@@ -257,6 +258,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 0
+--- !u!114 &107499557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 107499551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e133bebaa5d6c568abc200b041f7ad5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 107499552}
 --- !u!1 &525569265
 GameObject:
   m_ObjectHideFlags: 0
@@ -337,6 +351,7 @@ MonoBehaviour:
   lastfx: {fileID: 0}
   continuingBlock: 0
   isBlockAffects: 1
+  idealBlock: 1
 --- !u!65 &525569270
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -348,8 +363,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.2081428, y: 0.35227823, z: 1}
-  m_Center: {x: 1.4083045, y: 1.06, z: 0}
+  m_Size: {x: 3.2081428, y: 0.06097555, z: 1}
+  m_Center: {x: 1.4083045, y: 1.2056513, z: 0}
 --- !u!1 &544687075
 GameObject:
   m_ObjectHideFlags: 0
@@ -427,7 +442,7 @@ GameObject:
   - component: {fileID: 588167667}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Undestroyable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -910,6 +925,18 @@ PrefabInstance:
       value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 7187155762258265868, guid: d72afb5ded2416d29afb1b77da9e9c99, type: 3}
+      propertyPath: speed.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7187155762258265868, guid: d72afb5ded2416d29afb1b77da9e9c99, type: 3}
+      propertyPath: speed.Array.data[1]
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 7187155762258265868, guid: d72afb5ded2416d29afb1b77da9e9c99, type: 3}
+      propertyPath: speed.Array.data[2]
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7187155762258265868, guid: d72afb5ded2416d29afb1b77da9e9c99, type: 3}
       propertyPath: defaultAnimatorSpeed
       value: 1
       objectReference: {fileID: 0}
@@ -1033,7 +1060,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6765251573778928817, guid: 663f895c4469197c8a402a006b506a2a, type: 3}
       propertyPath: ExternalForcesModule.multiplierCurve.scalar
-      value: 0.02
+      value: 0.009
       objectReference: {fileID: 0}
     - target: {fileID: 6765251573778928817, guid: 663f895c4469197c8a402a006b506a2a, type: 3}
       propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].time

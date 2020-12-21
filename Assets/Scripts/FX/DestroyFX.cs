@@ -12,7 +12,12 @@ public class DestroyFX : MonoBehaviour
     void Start()
     {
         StartCoroutine("Terminate");
-        lght = this.transform.GetChild(0).GetComponent<Light>();
+        try{
+            lght = this.transform.GetChild(0).GetComponent<Light>();
+        }
+        catch(UnityException _e){
+            lght = null;
+        }
         StartCoroutine("Extend");
     }
 
@@ -25,7 +30,10 @@ public class DestroyFX : MonoBehaviour
     }
 
     IEnumerator Extend(){
-        while(!prohibitDestroy && lght != null){
+        if(lght == null){
+            yield break;
+        }
+        while(!prohibitDestroy){
             yield return new WaitForFixedUpdate();
             lght.range += extendLightSpeed;
             lght.intensity += extendLightSpeed;

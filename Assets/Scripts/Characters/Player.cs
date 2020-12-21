@@ -6,7 +6,7 @@ public class Player : MonoBehaviour, ICharacter
 {
     private Vector3 startPosition;
     const float NormalizeSpeed = 10f;
-    [SerializeField]private float[] speed = {0f, 0.1f};
+    [SerializeField]private float[] speed = {0f, 0.06f, 0.1f};
     public Animator animator;
     public float speedMultiplier=1f;
     [SerializeField]private bool isStopped=true;
@@ -99,6 +99,9 @@ public class Player : MonoBehaviour, ICharacter
 
     // TODO: extend
     public float GetSpeed(){
+        if(!this.isStopped && Input.GetKey(KeyCode.LeftShift)){
+            return speed[2] * speedMultiplier;
+        }
         return (this.isStopped)? speed[0]*speedMultiplier : speed[1]*speedMultiplier;
     }
 
