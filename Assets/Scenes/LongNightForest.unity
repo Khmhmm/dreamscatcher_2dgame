@@ -269,6 +269,7 @@ GameObject:
   - component: {fileID: 525569268}
   - component: {fileID: 525569267}
   - component: {fileID: 525569269}
+  - component: {fileID: 525569270}
   m_Layer: 0
   m_Name: NeuroForce
   m_TagString: Untagged
@@ -300,10 +301,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 1.7048922
+  m_Radius: 0.85505164
+  m_Height: 1.7101033
   m_Direction: 1
-  m_Center: {x: 0.09525585, y: 0.6763158, z: 0}
+  m_Center: {x: 0.4503075, y: 0.6763158, z: 0}
 --- !u!54 &525569268
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -333,6 +334,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fx: {fileID: 5753447162358706996, guid: 6c554fce1d592dd1185b77f307f5e09d, type: 3}
+  lastfx: {fileID: 0}
+  continuingBlock: 0
+  isBlockAffects: 1
+--- !u!65 &525569270
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 525569265}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.2081428, y: 0.35227823, z: 1}
+  m_Center: {x: 1.4083045, y: 1.06, z: 0}
 --- !u!1 &544687075
 GameObject:
   m_ObjectHideFlags: 0
@@ -963,6 +980,26 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6765251573778928817, guid: 663f895c4469197c8a402a006b506a2a, type: 3}
+      propertyPath: simulationSpeed
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6765251573778928817, guid: 663f895c4469197c8a402a006b506a2a, type: 3}
+      propertyPath: moveWithTransform
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6765251573778928817, guid: 663f895c4469197c8a402a006b506a2a, type: 3}
+      propertyPath: ClampVelocityModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6765251573778928817, guid: 663f895c4469197c8a402a006b506a2a, type: 3}
+      propertyPath: ClampVelocityModule.y.scalar
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 6765251573778928817, guid: 663f895c4469197c8a402a006b506a2a, type: 3}
+      propertyPath: ClampVelocityModule.z.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6765251573778928817, guid: 663f895c4469197c8a402a006b506a2a, type: 3}
       propertyPath: InitialModule.maxNumParticles
       value: 25
       objectReference: {fileID: 0}
@@ -971,16 +1008,32 @@ PrefabInstance:
       value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 6765251573778928817, guid: 663f895c4469197c8a402a006b506a2a, type: 3}
+      propertyPath: ClampVelocityModule.separateAxis
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6765251573778928817, guid: 663f895c4469197c8a402a006b506a2a, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6765251573778928817, guid: 663f895c4469197c8a402a006b506a2a, type: 3}
+      propertyPath: ClampVelocityModule.magnitude.scalar
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6765251573778928817, guid: 663f895c4469197c8a402a006b506a2a, type: 3}
       propertyPath: InitialModule.gravityModifier.scalar
-      value: 0
+      value: 0.008
       objectReference: {fileID: 0}
     - target: {fileID: 6765251573778928817, guid: 663f895c4469197c8a402a006b506a2a, type: 3}
       propertyPath: SizeModule.curve.maxCurve.m_PostInfinity
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6765251573778928817, guid: 663f895c4469197c8a402a006b506a2a, type: 3}
+      propertyPath: InitialModule.gravityModifier.minMaxState
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6765251573778928817, guid: 663f895c4469197c8a402a006b506a2a, type: 3}
+      propertyPath: ExternalForcesModule.multiplierCurve.scalar
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 6765251573778928817, guid: 663f895c4469197c8a402a006b506a2a, type: 3}
       propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].time

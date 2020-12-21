@@ -40,7 +40,7 @@ WindZone:
   m_GameObject: {fileID: 4686773995799706443}
   m_Enabled: 1
   m_Mode: 1
-  m_Radius: 20
+  m_Radius: 5
   m_WindMain: 150
   m_WindTurbulence: 1
   m_WindPulseMagnitude: 0.5
@@ -4874,6 +4874,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   duration: 1
   extendLightSpeed: 0.05
+  prohibitDestroy: 0
 --- !u!1 &5753447163026457464
 GameObject:
   m_ObjectHideFlags: 0
