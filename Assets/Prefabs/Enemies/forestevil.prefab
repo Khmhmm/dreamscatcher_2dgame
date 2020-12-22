@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2548764234310641786}
   - component: {fileID: 2548764234310641789}
   - component: {fileID: 2548764234310641787}
+  - component: {fileID: 1462682061}
   m_Layer: 0
   m_Name: forestevil
   m_TagString: Untagged
@@ -150,6 +151,19 @@ MonoBehaviour:
   anim: {fileID: 2548764234310641790}
   attackInterval: 2
   missile: {fileID: 3995105411759265071, guid: bcd8012e3021e461483d8cdde890a59b, type: 3}
+--- !u!65 &1462682061
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2548764234310641729}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.8802805, y: 0.64, z: 0.20000002}
+  m_Center: {x: -0.01396997, y: 0, z: 0}
 --- !u!1 &2548764234662420460
 GameObject:
   m_ObjectHideFlags: 0
@@ -175,7 +189,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2548764234662420460}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.017, y: -0.069, z: -0.29}
+  m_LocalPosition: {x: 0.017, y: 0.151, z: -0.29}
   m_LocalScale: {x: 0.3554794, y: 0.31488875, z: 1}
   m_Children: []
   m_Father: {fileID: 2548764234310641788}
@@ -194,7 +208,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_Intensity: 33.7
-  m_Range: 1.25
+  m_Range: 4.12
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
