@@ -28,4 +28,10 @@ public class Missile : MonoBehaviour
         yield return new WaitForSeconds(5f);
         Destroy(this.gameObject);
     }
+
+    void OnTriggerEnter(Collider col){
+        if( col.gameObject.GetComponent<Player>() != null ){
+            Destroy(col.gameObject);
+        }
+    }
 }
