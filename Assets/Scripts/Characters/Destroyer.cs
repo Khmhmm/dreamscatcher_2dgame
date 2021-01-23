@@ -24,7 +24,7 @@ public class Destroyer : MonoBehaviour{
                     DestroyLastFx();
                 }
             }
-            lastfx = Instantiate(fx, transform.position + new Vector3(1f, 1f, 0f), Quaternion.Euler(0f,0f,0f));
+            lastfx = Instantiate(fx, transform.position + new Vector3(0.1f, 0.1f, 0f), Quaternion.Euler(0f,0f,0f));
             lastfx.transform.parent = this.transform;
         }
     }

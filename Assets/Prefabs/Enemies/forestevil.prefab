@@ -134,7 +134,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.22306895, y: 0.31729597, z: 0.20000002}
+  m_Size: {x: 0.22306895, y: 0.31729597, z: 20}
   m_Center: {x: -0.0060327766, y: -0.094850264, z: 0}
 --- !u!114 &2548764234310641787
 MonoBehaviour:
@@ -149,8 +149,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 2548764234310641790}
-  attackInterval: 2
-  missile: {fileID: 3995105411759265071, guid: bcd8012e3021e461483d8cdde890a59b, type: 3}
+  text: 
+  printedText: 
+  subInterval: 2
+  cam: {fileID: 0}
+  guiW: 250
+  guiH: 250
+  skin: {fileID: 11400000, guid: 1e425da7c8c74f843b7408fdad36b63b, type: 2}
 --- !u!65 &1462682061
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -162,8 +167,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.8802805, y: 0.64, z: 0.20000002}
-  m_Center: {x: -0.01396997, y: 0, z: 0}
+  m_Size: {x: 1.3634645, y: 0.64, z: 20}
+  m_Center: {x: 0.0028074493, y: 0, z: 0}
 --- !u!1 &2548764234662420460
 GameObject:
   m_ObjectHideFlags: 0

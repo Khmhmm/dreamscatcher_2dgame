@@ -17,6 +17,13 @@ public class Player : MonoBehaviour, ICharacter
 
     private GameObject destroyer;
     [SerializeField]private float blockTime = 0f;
+    private string shownText = "";
+    private string textBuf = null;
+    private bool textGUI = false;
+    public Camera cam;
+    public GUISkin skin;
+    public float guiW = 250f;
+    public float guiH = 250f;
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +33,10 @@ public class Player : MonoBehaviour, ICharacter
         // takes `NeuroForce object`
         this.destroyer = this.GetComponent<Transform>().GetChild(0).gameObject;
         this.destroyer.SetActive(false);
-        startPosition = transform.position;
+        startPosition = transform.parent.position;
+        if(cam == null){
+          cam = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
+        }
     }
 
 
@@ -85,6 +95,14 @@ public class Player : MonoBehaviour, ICharacter
         }
     }
 
+    void OnGUI(){
+      GUI.skin = skin;
+      if (textGUI){
+        Vector3 screenPosition = cam.WorldToScreenPoint(this.transform.position);
+        GUI.Box(new Rect(screenPosition.x - guiW/2f, Screen.height - (screenPosition.y*1.5f + guiH), guiW, guiH), this.shownText);
+      }
+    }
+
     public void Move(Vector3 movement){
         Vector3 norm_d = Vector3.Normalize(movement);
         norm_d.x *= GetSpeed(); norm_d.y *= GetSpeed(); norm_d.z = 0;
@@ -128,5 +146,25 @@ public class Player : MonoBehaviour, ICharacter
     IEnumerator ReplaceIdealBlock(){
         yield return new WaitForSeconds(0.2f);
         this.destroyer.GetComponent<Destroyer>().idealBlock = false;
+    }
+
+    IEnumerator ShowText(string text){
+      if (this.textBuf == null){
+        this.textBuf = text;
+      }
+      this.textGUI = true;
+      for (int i=0; i < this.textBuf.Length; i+=2 ){
+        this.shownText = this.textBuf.Substring(0,i);
+        yield return new WaitForSeconds(0.1f);
+      }
+      this.shownText = this.textBuf;
+      StartCoroutine("DisposeText");
+    }
+
+    IEnumerator DisposeText(){
+      yield return new WaitForSeconds(2f);
+      this.textBuf = null;
+      this.shownText = null;
+      this.textGUI = false;
     }
 }
