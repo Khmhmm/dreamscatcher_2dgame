@@ -99,7 +99,7 @@ public class Player : MonoBehaviour, ICharacter
       GUI.skin = skin;
       if (textGUI){
         Vector3 screenPosition = cam.WorldToScreenPoint(this.transform.position);
-        GUI.Box(new Rect(screenPosition.x - guiW/2f, Screen.height - (screenPosition.y*1.5f + guiH), guiW, guiH), this.shownText);
+        GUI.Box(new Rect(screenPosition.x + guiW/2f, Screen.height - (screenPosition.y*1.5f + guiH), guiW + this.shownText.Length * 7.5f, guiH), this.shownText);
       }
     }
 
