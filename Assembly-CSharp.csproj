@@ -57,7 +57,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Characters\Destroyer.cs" />
      <Compile Include="Assets\Scripts\Characters\Enemy.cs" />
-     <Compile Include="Assets\Scripts\Characters\ICharacter.cs" />
+     <Compile Include="Assets\Scripts\Characters\Character.cs" />
      <Compile Include="Assets\Scripts\Characters\Player.cs" />
      <Compile Include="Assets\Scripts\FX\DestroyFX.cs" />
      <Compile Include="Assets\Scripts\FX\MovingLight.cs" />

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EmotionTrigger : MonoBehaviour
+public class EmotionTrigger : MonoBehaviour, IDeserializable
 {
     public string textToSpeech;
 
@@ -11,5 +11,14 @@ public class EmotionTrigger : MonoBehaviour
         col.transform.parent.GetComponentInChildren<Player>().StartCoroutine("ShowText", this.textToSpeech);
         Destroy(this.gameObject);
       }
+    }
+
+    // impl of IDeserializable
+    string IDeserializable.Hash(){
+      return this.gameObject.name + "ax152dsa231L";
+    }
+
+    void IDeserializable.SetProperty(string property){
+      this.textToSpeech = property;
     }
 }

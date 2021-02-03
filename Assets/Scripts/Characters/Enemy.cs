@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour, ICharacter{
+public class Enemy : Character, IDeserializable{
 
     public Animator anim;
     //public float attackInterval = 2f;
@@ -11,7 +11,7 @@ public class Enemy : MonoBehaviour, ICharacter{
     private bool isActivated = false;
     private BoxCollider activationTrigger;
     public string text = "";
-    [SerializeField]private string printedText = "";
+    private string printedText = "";
     private int lastIdx = 0;
     public int subInterval = 2;
     public Camera cam;
@@ -49,7 +49,7 @@ public class Enemy : MonoBehaviour, ICharacter{
       GUI.skin = skin;
       if (isActivated){
         Vector3 screenPosition = cam.WorldToScreenPoint(this.transform.position);
-        GUI.Box(new Rect(screenPosition.x - guiW/2f, Screen.height - (screenPosition.y*1.5f + guiH), guiW, guiH), this.printedText);
+        this.ViewText(screenPosition, guiW, guiH, printedText);
       }
     }
 
@@ -81,15 +81,15 @@ public class Enemy : MonoBehaviour, ICharacter{
     //     isActivated = true;
     // }
 
-    public void Move(Vector3 movement){
+    public override void Move(Vector3 movement){
         transform.Translate(movement);
     }
 
-    public void SetAnimator(string fieldName, bool flag){
+    public override void SetAnimator(string fieldName, bool flag){
         anim?.SetBool(fieldName, flag);
     }
 
-    public float GetSpeed(){
+    public override float GetSpeed(){
         return 1f;
     }
 
@@ -98,5 +98,14 @@ public class Enemy : MonoBehaviour, ICharacter{
             isActivated = true;
             Destroy(this.activationTrigger);
         }
+    }
+
+    // impl of IDeserializable
+    string IDeserializable.Hash(){
+      return this.gameObject.name + "41289334e89scdsL";
+    }
+
+    void IDeserializable.SetProperty(string property){
+      this.text = property;
     }
 }

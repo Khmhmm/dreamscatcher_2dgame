@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour, ICharacter
+public class Player : Character
 {
     private Vector3 startPosition;
     const float NormalizeSpeed = 10f;
@@ -99,24 +99,24 @@ public class Player : MonoBehaviour, ICharacter
       GUI.skin = skin;
       if (textGUI){
         Vector3 screenPosition = cam.WorldToScreenPoint(this.transform.position);
-        GUI.Box(new Rect(screenPosition.x + guiW/2f, Screen.height - (screenPosition.y*1.5f + guiH), guiW + this.shownText.Length * 7.5f, guiH), this.shownText);
+        this.ViewText(screenPosition, guiW, guiH, shownText);
       }
     }
 
-    public void Move(Vector3 movement){
+    public override void Move(Vector3 movement){
         Vector3 norm_d = Vector3.Normalize(movement);
         norm_d.x *= GetSpeed(); norm_d.y *= GetSpeed(); norm_d.z = 0;
         transform.parent.Translate(norm_d);
         this.isStopped = false;
     }
 
-    public void SetAnimator(string fieldName, bool flag){
+    public override void SetAnimator(string fieldName, bool flag){
         this.animator.speed =  (isStopped)? starterAnimatorSpeed : GetSpeed()*NormalizeSpeed*starterAnimatorSpeed;
         this.animator.SetBool(fieldName, flag);
     }
 
     // TODO: extend
-    public float GetSpeed(){
+    public override float GetSpeed(){
         if(!this.isStopped && Input.GetKey(KeyCode.LeftShift)){
             return speed[2] * speedMultiplier;
         }
