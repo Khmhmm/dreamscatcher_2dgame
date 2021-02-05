@@ -41,7 +41,8 @@ public class Destroyer : MonoBehaviour{
     //Destroys everything what collides except of player
     void OnTriggerEnter(Collider col){
         var gObj = col.gameObject;
-        if(gObj.tag != "Player" && gObj.tag != "Undestroyable" && isBlockAffects) {
+        Debug.Log(gObj.name);
+        if(gObj.GetComponent<IDestroyable>() != null && isBlockAffects) {
             Destroy(gObj);
         }
     }

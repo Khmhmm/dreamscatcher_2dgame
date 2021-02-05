@@ -3,6 +3,7 @@
 /Packages
 /Temp
 /UserSettings
+/Data
 *.suo
 *.lock
 *.cache

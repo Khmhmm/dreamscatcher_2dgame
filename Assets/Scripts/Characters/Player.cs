@@ -10,6 +10,7 @@ public class Player : Character
     public Animator animator;
     public float speedMultiplier=1f;
     [SerializeField]private bool isStopped=true;
+    private bool dialogue = false;
 
     private float starterAnimatorSpeed;
 
@@ -17,13 +18,6 @@ public class Player : Character
 
     private GameObject destroyer;
     [SerializeField]private float blockTime = 0f;
-    private string shownText = "";
-    private string textBuf = null;
-    private bool textGUI = false;
-    public Camera cam;
-    public GUISkin skin;
-    public float guiW = 250f;
-    public float guiH = 250f;
 
     // Start is called before the first frame update
     void Start()
@@ -34,14 +28,15 @@ public class Player : Character
         this.destroyer = this.GetComponent<Transform>().GetChild(0).gameObject;
         this.destroyer.SetActive(false);
         startPosition = transform.parent.position;
-        if(cam == null){
-          cam = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
-        }
+        base.Start();
     }
 
 
     void FixedUpdate()
     {
+        if(dialogue){
+          return;
+        }
         // NOTE: debug feature
         // if (Input.GetMouseButton(0) || true){
         if (Input.GetMouseButton(0)){
@@ -95,14 +90,6 @@ public class Player : Character
         }
     }
 
-    void OnGUI(){
-      GUI.skin = skin;
-      if (textGUI){
-        Vector3 screenPosition = cam.WorldToScreenPoint(this.transform.position);
-        this.ViewText(screenPosition, guiW, guiH, shownText);
-      }
-    }
-
     public override void Move(Vector3 movement){
         Vector3 norm_d = Vector3.Normalize(movement);
         norm_d.x *= GetSpeed(); norm_d.y *= GetSpeed(); norm_d.z = 0;
@@ -148,23 +135,12 @@ public class Player : Character
         this.destroyer.GetComponent<Destroyer>().idealBlock = false;
     }
 
-    IEnumerator ShowText(string text){
-      if (this.textBuf == null){
-        this.textBuf = text;
-      }
-      this.textGUI = true;
-      for (int i=0; i < this.textBuf.Length; i+=2 ){
-        this.shownText = this.textBuf.Substring(0,i);
-        yield return new WaitForSeconds(0.1f);
-      }
-      this.shownText = this.textBuf;
-      StartCoroutine("DisposeText");
+    public void LockDialogue(){
+      dialogue = true;
+      isStopped = true;
     }
 
-    IEnumerator DisposeText(){
-      yield return new WaitForSeconds(2f);
-      this.textBuf = null;
-      this.shownText = null;
-      this.textGUI = false;
+    public void ReleaseDialogue(){
+      dialogue = false;
     }
 }
