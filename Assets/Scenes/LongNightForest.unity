@@ -2410,6 +2410,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   searchDir: longnightforest
   filename: data.json
+  langPrefix: ru
 --- !u!4 &830169211
 Transform:
   m_ObjectHideFlags: 0

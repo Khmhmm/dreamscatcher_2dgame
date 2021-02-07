@@ -13,29 +13,20 @@ public class Deser : MonoBehaviour
     public string searchDir = "";
     public string filename = "";
     private string searchPath = "";
+    public string langPrefix = "";
+    static readonly char sep = Path.DirectorySeparatorChar;
+    public bool isSimplePath = false;
     [SerializeField]private DeserMap map = new DeserMap();
 
-    void Start()
+    protected void Start()
     {
-      this.searchDir = "." + Path.DirectorySeparatorChar + "Data" + Path.DirectorySeparatorChar + this.searchDir;
-      this.searchPath = this.searchDir + Path.DirectorySeparatorChar + this.filename;
+
       IDeserializable[] children = this.transform.GetComponentsInChildren<IDeserializable>();
 
-      if (!File.Exists(this.searchPath)){
-        try{
-          Directory.CreateDirectory(this.searchDir);
-          Debug.Log("Not found directory. Bad news bruh.");
-          var f = File.Create(this.searchPath);
-          f.Close();
-        } catch (IOException _e){
-          Debug.Log(_e);
-        }
-      }
       using(Stream sr = File.OpenRead(this.searchPath)){
         var serde = new DataContractJsonSerializer(this.map.GetType());
         this.map = (DeserMap) serde.ReadObject(sr);
       }
-
 
       foreach(var entry in this.map.GetInner()){
         for(int i=0; i < children.Length; i++) {
@@ -46,6 +37,40 @@ public class Deser : MonoBehaviour
         }
       }
 
+    }
+
+    public static T ReadGeneric<T>(string path){
+      T ret = default(T);
+      using(Stream sr = File.OpenRead(path)){
+        var serde = new DataContractJsonSerializer(typeof(T));
+        ret = (T)serde.ReadObject(sr);
+      }
+      return ret;
+    }
+
+    public void BuildPath(){
+      if (isSimplePath){
+        this.searchPath = "." + Path.DirectorySeparatorChar + "Data" + Path.DirectorySeparatorChar + filename;
+      }
+      else{
+        this.searchDir = langPrefix + sep + searchDir;
+        this.searchDir = "." + sep + "Data" + sep + this.searchDir;
+        this.searchPath = this.searchDir + sep + this.filename;
+      }
+
+
+      if (!File.Exists(this.searchPath)){
+        try{
+          if(!isSimplePath){
+            Directory.CreateDirectory(this.langPrefix);
+            Directory.CreateDirectory(this.langPrefix + sep + this.searchDir);
+          }
+          var f = File.Create(this.searchPath);
+          f.Close();
+        } catch (IOException _e){
+          Debug.Log(_e);
+        }
+      }
     }
 }
 
