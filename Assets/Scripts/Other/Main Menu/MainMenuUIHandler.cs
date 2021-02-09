@@ -7,11 +7,14 @@ using System.Text;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Json;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenuUIHandler : Deser
 {
+    MetaGameData gameData;
+
     protected void Start(){
-      var gameData = transform.GetComponentInChildren<MetaGameData>();
+      gameData = transform.GetComponentInChildren<MetaGameData>();
 
       try{
         base.Start();
@@ -27,7 +30,7 @@ public class MainMenuUIHandler : Deser
     }
 
     public void ButtonPlay(){
-
+      SceneManager.LoadScene(gameData.lastLevel);
     }
 
     public void ButtonSettings(){
