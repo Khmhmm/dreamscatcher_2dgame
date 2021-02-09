@@ -16,19 +16,27 @@ public class Deser : MonoBehaviour
     public string langPrefix = "";
     static readonly char sep = Path.DirectorySeparatorChar;
     public bool isSimplePath = false;
-    [SerializeField]private DeserMap map = new DeserMap();
+
 
     protected void Start()
     {
-
       IDeserializable[] children = this.transform.GetComponentsInChildren<IDeserializable>();
+      DeserMap map = new DeserMap();
+      this.BuildPath();
 
-      using(Stream sr = File.OpenRead(this.searchPath)){
-        var serde = new DataContractJsonSerializer(this.map.GetType());
-        this.map = (DeserMap) serde.ReadObject(sr);
+
+      try{
+        using(Stream sr = File.OpenRead(this.searchPath)){
+          var serde = new DataContractJsonSerializer(map.GetType());
+          map = (DeserMap) serde.ReadObject(sr);
+        }
+      } catch (ArgumentException e){
+        Debug.LogError(e);
+      } catch (IOException _e) {
+        File.Create(this.searchPath);
       }
 
-      foreach(var entry in this.map.GetInner()){
+      foreach(var entry in map.GetInner()){
         for(int i=0; i < children.Length; i++) {
           if (children[i].Hash() == entry.Key) {
             children[i].SetProperty(entry.Value);
@@ -39,6 +47,7 @@ public class Deser : MonoBehaviour
 
     }
 
+
     public static T ReadGeneric<T>(string path){
       T ret = default(T);
       using(Stream sr = File.OpenRead(path)){
@@ -47,6 +56,7 @@ public class Deser : MonoBehaviour
       }
       return ret;
     }
+
 
     public void BuildPath(){
       if (isSimplePath){
@@ -72,6 +82,23 @@ public class Deser : MonoBehaviour
         }
       }
     }
+
+    public void Save(DeserMap map){
+      this.BuildPath();
+
+      try{
+        using(Stream sw = File.OpenWrite(this.searchPath)){
+          var serde = new DataContractJsonSerializer(map.GetType());
+          serde.WriteObject(sw, map);
+        }
+      } catch (ArgumentException e){
+        Debug.LogError(e);
+      } catch (IOException _e) {
+        File.Create(this.searchPath);
+      }
+    }
+
+
 }
 
 public class DeserMap{

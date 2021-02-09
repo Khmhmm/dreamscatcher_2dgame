@@ -1,3 +1,4 @@
+using System;
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -10,18 +11,18 @@ using UnityEngine;
 public class MainMenuUIHandler : Deser
 {
     protected void Start(){
-      var gameData = transform.GetComponentInChildren<MetaGameDataBehaviour>();
+      var gameData = transform.GetComponentInChildren<MetaGameData>();
 
       try{
-        var fileData = Deser.ReadGeneric<MetaGameData>(gameData.inner.path);
-        if(fileData != null){
-          gameData.inner.Mutate(fileData);
-        }
-      } catch(SerializationException _e) {}
+        base.Start();
+      } catch(ArgumentException _e){
+        gameData.SaveGame(this);
+      } catch(SerializationException _e){
+        gameData.SaveGame(this);
+      }
       finally{
-        //gameData.inner.SaveGame();
-        //gameData.transform.parent = null;
-        //DontDestroyOnLoad(gameData.gameObject);
+        gameData.transform.parent = null;
+        DontDestroyOnLoad(gameData.gameObject);
       }
     }
 
