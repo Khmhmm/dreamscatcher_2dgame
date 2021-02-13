@@ -48,6 +48,6 @@ public class MetaGameData : MonoBehaviour, IDeserializable
     var map = new DeserMap();
     map.Add( ((IDeserializable)(this)).Hash(), json );
 
-    deser.Save(map);
+    deser.Save(map, "savegame.json");
   }
 }

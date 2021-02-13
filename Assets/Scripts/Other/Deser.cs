@@ -59,6 +59,12 @@ public class Deser : MonoBehaviour
 
 
     public void BuildPath(){
+      try{
+        var gData = GameObject.Find("GameData").GetComponent<MetaGameData>();
+        this.langPrefix = gData.lang;
+      } catch (NullReferenceException _e) {
+        // Do nothing
+      }
       if (isSimplePath){
         this.searchPath = "." + Path.DirectorySeparatorChar + "Data" + Path.DirectorySeparatorChar + filename;
       }
@@ -83,11 +89,11 @@ public class Deser : MonoBehaviour
       }
     }
 
-    public void Save(DeserMap map){
-      this.BuildPath();
+    public void Save(DeserMap map, string path){
+      var writePath = "." + sep + "Data" + sep + path;
 
       try{
-        using(Stream sw = File.OpenWrite(this.searchPath)){
+        using(Stream sw = File.OpenWrite(writePath)){
           var serde = new DataContractJsonSerializer(map.GetType());
           serde.WriteObject(sw, map);
         }

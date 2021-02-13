@@ -2411,6 +2411,7 @@ MonoBehaviour:
   searchDir: longnightforest
   filename: data.json
   langPrefix: ru
+  isSimplePath: 0
 --- !u!4 &830169211
 Transform:
   m_ObjectHideFlags: 0

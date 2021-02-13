@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System;
 using UnityEngine;
 
-public class DialogueTrigger : MonoBehaviour, IDeserializable
+public class DialogueTrigger : MonoBehaviour, IDeserializable, IDestroyAndThen
 {
   const int UNACTIVATEDTRIGGER = -15;
   [SerializeField]public Dialogue dialogue;
@@ -11,6 +11,7 @@ public class DialogueTrigger : MonoBehaviour, IDeserializable
   private int idx = UNACTIVATEDTRIGGER;
   private bool clickDelay = false;
   private Player player;
+  public GameObject spawnOnDestroy;
 
 
     void OnTriggerEnter2D(Collider2D col){
@@ -39,7 +40,7 @@ public class DialogueTrigger : MonoBehaviour, IDeserializable
         }
         else{
           player.ReleaseDialogue();
-          Destroy(this.gameObject);
+          this.GetComponent<IDestroyAndThen>().DestroyAndThen();
         }
       }
     }
@@ -82,5 +83,10 @@ public class DialogueTrigger : MonoBehaviour, IDeserializable
       );
       this.dialogue.replicsList.Add(replics);
     }
+  }
+
+  void IDestroyAndThen.DestroyAndThen(){
+    Instantiate(this.spawnOnDestroy, this.transform.parent);
+    Destroy(this.gameObject);
   }
 }
