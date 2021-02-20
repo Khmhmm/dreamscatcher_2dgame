@@ -19,6 +19,8 @@ public class Player : Character
     private GameObject destroyer;
     [SerializeField]private float blockTime = 0f;
 
+    [SerializeField]private bool insideDream = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,7 +41,7 @@ public class Player : Character
         }
         // NOTE: debug feature
         // if (Input.GetMouseButton(0) || true){
-        if (Input.GetMouseButton(0)){
+        if (Input.GetMouseButton(0) && insideDream){
             if (!blockDelay){
                 // stops last coroutine to avoid blockDelay reset
                 StopCoroutine("Block");

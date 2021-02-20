@@ -86,7 +86,9 @@ public class DialogueTrigger : MonoBehaviour, IDeserializable, IDestroyAndThen
   }
 
   void IDestroyAndThen.DestroyAndThen(){
-    Instantiate(this.spawnOnDestroy, this.transform.parent);
+    if(this.spawnOnDestroy != null){
+      Instantiate(this.spawnOnDestroy, this.transform.parent);
+    }
     Destroy(this.gameObject);
   }
 }

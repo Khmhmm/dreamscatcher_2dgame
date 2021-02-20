@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/ThoughtsBeforeForest.unity
     guid: da9ed590f3b36504b8eb86a4a722499a
   - enabled: 1
+    path: Assets/Scenes/Forest.unity
+    guid: 7044df73c10059fcfa9f2039ab455e55
+  - enabled: 1
     path: Assets/Scenes/LongNightForest.unity
     guid: 3e681b7d9335c36bfbf863002ca412aa
   m_configObjects: {}
