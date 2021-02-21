@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : Character
 {
@@ -13,6 +14,7 @@ public class Player : Character
     private bool dialogue = false;
 
     private float starterAnimatorSpeed;
+    private GameObject phoneLight;
 
     [SerializeField]private bool blockDelay = false;
 
@@ -27,7 +29,8 @@ public class Player : Character
         this.animator = GetComponent<Animator>();
         starterAnimatorSpeed = this.animator.speed;
         // takes `NeuroForce object`
-        this.destroyer = this.GetComponent<Transform>().GetChild(0).gameObject;
+        this.destroyer = this.transform.GetChild(0).gameObject;
+        this.phoneLight = this.transform.GetChild(1).gameObject;
         this.destroyer.SetActive(false);
         startPosition = transform.parent.position;
         base.Start();
@@ -86,9 +89,14 @@ public class Player : Character
     void LateUpdate(){
         this.SetAnimator("stay", isStopped);
         this.SetAnimator("block", blockDelay);
+        phoneLight.SetActive(this.GetComponent<Animator>().GetBool("phone"));
         if (transform.position.y < -200f){
             transform.parent.position = startPosition;
             transform.parent.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        }
+
+        if(Input.GetKey(KeyCode.Escape)){
+          SceneManager.LoadScene(0);
         }
     }
 

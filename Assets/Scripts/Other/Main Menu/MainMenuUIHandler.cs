@@ -16,6 +16,13 @@ public class MainMenuUIHandler : Deser
     protected void Start(){
       gameData = transform.GetComponentInChildren<MetaGameData>();
 
+      // Needed when you go to main menu from another scene with already setted game data
+      if(GameObject.FindGameObjectsWithTag("GameData").Length > 1){
+        Destroy(gameData.gameObject);
+        gameData = GameObject.FindWithTag("GameData").GetComponent<MetaGameData>();
+        return;
+      }
+
       try{
         base.Start();
       } catch(ArgumentException _e){
@@ -34,7 +41,7 @@ public class MainMenuUIHandler : Deser
     }
 
     public void ButtonSettings(){
-
+      SceneManager.LoadScene("Settings");
     }
 
     public void ButtonExit(){

@@ -1,40 +1,40 @@
 fileFormatVersion: 2
-guid: 541694807d1fc754fae0501d78d4c711
+guid: 0556a1aad1648ea4aac2323733b94bd8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4578591244471777430
-    second: Wind_0
+      213: -5966621866309598838
+    second: Fall_0
   - first:
-      213: -1387331921383137420
-    second: Wind_1
+      213: -2069157278089061004
+    second: Fall_1
   - first:
-      213: 1714587572013046209
-    second: Wind_2
+      213: 6596617931644657277
+    second: Fall_2
   - first:
-      213: 4418870476218435729
-    second: Wind_3
+      213: 7514022213351704123
+    second: Fall_3
   - first:
-      213: 7144953509852361976
-    second: Wind_4
+      213: 4554010780549788214
+    second: Fall_4
   - first:
-      213: -4360064557889419803
-    second: Wind_5
+      213: -7552172474170666178
+    second: Fall_5
   - first:
-      213: -3384560776525063741
-    second: Wind_6
+      213: -2761696545112888762
+    second: Fall_6
   - first:
-      213: 1908295033650543132
-    second: Wind_7
+      213: 1007656813936970757
+    second: Fall_7
   - first:
-      213: -6242126359890753430
-    second: Wind_8
+      213: 4325049100246099222
+    second: Fall_8
   - first:
-      213: -4686330269285204752
-    second: Wind_9
+      213: 823184671987604067
+    second: Fall_9
   - first:
-      213: 4636766719792352285
-    second: Wind_10
+      213: 1803439073425235549
+    second: Fall_10
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -122,7 +122,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Wind_0
+      name: Fall_0
       rect:
         serializedVersion: 2
         x: 0
@@ -136,14 +136,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 698347a7a7c6a8f30800000000000000
-      internalID: 4578591244471777430
+      spriteID: a81c98d660d423da0800000000000000
+      internalID: -5966621866309598838
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wind_1
+      name: Fall_1
       rect:
         serializedVersion: 2
         x: 0
@@ -157,14 +157,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 47fd568c7f43fbce0800000000000000
-      internalID: -1387331921383137420
+      spriteID: 47d561f1b60e843e0800000000000000
+      internalID: -2069157278089061004
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wind_2
+      name: Fall_2
       rect:
         serializedVersion: 2
         x: 0
@@ -178,14 +178,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c9132eff407bc710800000000000000
-      internalID: 1714587572013046209
+      spriteID: d7ed6a6fe05eb8b50800000000000000
+      internalID: 6596617931644657277
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wind_3
+      name: Fall_3
       rect:
         serializedVersion: 2
         x: 0
@@ -199,14 +199,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1980673394bf25d30800000000000000
-      internalID: 4418870476218435729
+      spriteID: b36093d546b274860800000000000000
+      internalID: 7514022213351704123
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wind_4
+      name: Fall_4
       rect:
         serializedVersion: 2
         x: 0
@@ -220,14 +220,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f43e639c59f72360800000000000000
-      internalID: 7144953509852361976
+      spriteID: 63238fd3da8133f30800000000000000
+      internalID: 4554010780549788214
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wind_5
+      name: Fall_5
       rect:
         serializedVersion: 2
         x: 0
@@ -241,14 +241,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e50b3d9260fd73c0800000000000000
-      internalID: -4360064557889419803
+      spriteID: e33139ad52b413790800000000000000
+      internalID: -7552172474170666178
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wind_6
+      name: Fall_6
       rect:
         serializedVersion: 2
         x: 0
@@ -262,14 +262,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c9d08ae7ef9701d0800000000000000
-      internalID: -3384560776525063741
+      spriteID: 64a6f13df9b7ca9d0800000000000000
+      internalID: -2761696545112888762
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wind_7
+      name: Fall_7
       rect:
         serializedVersion: 2
         x: 0
@@ -283,14 +283,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1af167f830ab7a10800000000000000
-      internalID: 1908295033650543132
+      spriteID: 50c0732988aebfd00800000000000000
+      internalID: 1007656813936970757
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wind_8
+      name: Fall_8
       rect:
         serializedVersion: 2
         x: 0
@@ -304,14 +304,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a680c9bd5238f59a0800000000000000
-      internalID: -6242126359890753430
+      spriteID: 615aa48dd39a50c30800000000000000
+      internalID: 4325049100246099222
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wind_9
+      name: Fall_9
       rect:
         serializedVersion: 2
         x: 0
@@ -325,14 +325,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0fc3817037fc6feb0800000000000000
-      internalID: -4686330269285204752
+      spriteID: 36a1e56091a8c6b00800000000000000
+      internalID: 823184671987604067
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wind_10
+      name: Fall_10
       rect:
         serializedVersion: 2
         x: 0
@@ -346,8 +346,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1c8397d3ca195040800000000000000
-      internalID: 4636766719792352285
+      spriteID: d5e1291484a170910800000000000000
+      internalID: 1803439073425235549
       vertices: []
       indices: 
       edges: []

@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LongNightForest.unity
     guid: 3e681b7d9335c36bfbf863002ca412aa
+  - enabled: 1
+    path: Assets/Scenes/ToBeContinued.unity
+    guid: 21b0ed40433f79d4a89225afa5d6f887
+  - enabled: 1
+    path: Assets/Scenes/Settings.unity
+    guid: 8b02f880e73be4545ae335ab04fca76d
   m_configObjects: {}

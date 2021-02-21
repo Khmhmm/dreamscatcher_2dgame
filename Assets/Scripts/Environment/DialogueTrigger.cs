@@ -12,6 +12,7 @@ public class DialogueTrigger : MonoBehaviour, IDeserializable, IDestroyAndThen
   private bool clickDelay = false;
   private Player player;
   public GameObject spawnOnDestroy;
+  public bool takePhone = false;
 
 
     void OnTriggerEnter2D(Collider2D col){
@@ -19,6 +20,9 @@ public class DialogueTrigger : MonoBehaviour, IDeserializable, IDestroyAndThen
       if(_player != null){
         this.player = _player;
         player.LockDialogue();
+        if(takePhone){
+          player.GetComponent<Character>().SetAnimator("phone", true);
+        }
         // we will increment this one by mouse button
         idx = -1;
         Debug.Log("Started dialogue");
@@ -36,7 +40,8 @@ public class DialogueTrigger : MonoBehaviour, IDeserializable, IDestroyAndThen
           idx += 1;
           var iter = dialogue.replicsList[idx];
           float timeToShow = iter.speaker.InvokeShowText(iter.text);
-          StartCoroutine("Unclick", timeToShow);
+          var unclickAsync = Unclick(timeToShow, iter.speaker);
+          StartCoroutine(unclickAsync);
         }
         else{
           player.ReleaseDialogue();
@@ -46,8 +51,13 @@ public class DialogueTrigger : MonoBehaviour, IDeserializable, IDestroyAndThen
     }
 
 
-  IEnumerator Unclick(float delay){
-    yield return new WaitForSeconds(delay);
+  IEnumerator Unclick(float delay, Character checkQuickUnclick){
+    for(int i=0; i<4;i++){
+      yield return new WaitForSeconds(delay/4f);
+      if(!checkQuickUnclick.IsTextGUI()){
+        break;
+      }
+    }
     clickDelay = false;
   }
 
@@ -86,6 +96,7 @@ public class DialogueTrigger : MonoBehaviour, IDeserializable, IDestroyAndThen
   }
 
   void IDestroyAndThen.DestroyAndThen(){
+    player.GetComponent<Character>().SetAnimator("phone", false);
     if(this.spawnOnDestroy != null){
       Instantiate(this.spawnOnDestroy, this.transform.parent);
     }

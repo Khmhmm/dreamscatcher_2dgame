@@ -32,11 +32,16 @@ public abstract class Character: MonoBehaviour{
     }
 
     IEnumerator ShowText(string text){
+      // Wait for Mouse Button unclicked
+      yield return new WaitForSeconds(0.5f);
       if (this.textBuf == null){
         this.textBuf = text;
       }
       this.textGUI = true;
       for (int i=0; i + 5 < this.textBuf.Length; i+=5 ){
+        if(Input.GetMouseButton(0)){
+          break;
+        }
         this.shownText = this.textBuf.Substring(0,i);
         yield return new WaitForSeconds(0.1f);
       }
@@ -45,7 +50,12 @@ public abstract class Character: MonoBehaviour{
     }
 
     IEnumerator DisposeText(){
-      yield return new WaitForSeconds(2f);
+      for(int i=0; i< 5; i++){
+        yield return new WaitForSeconds(0.5f);
+        if(Input.GetMouseButton(0)){
+          break;
+        }
+      }
       this.textBuf = null;
       this.shownText = null;
       this.textGUI = false;
@@ -55,7 +65,7 @@ public abstract class Character: MonoBehaviour{
       return this.shownText;
     }
 
-    bool IsTextGUI(){
+    public bool IsTextGUI(){
       return this.textGUI;
     }
 
