@@ -3,7 +3,7 @@
 /Packages
 /Temp
 /UserSettings
-/Data
+savegame.json
 *.suo
 *.lock
 *.cache
