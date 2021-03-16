@@ -2184,6 +2184,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8672535185606191510, guid: 493d0511fabf6d4499071b966b418dc5, type: 3}
+      propertyPath: insideDream
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 493d0511fabf6d4499071b966b418dc5, type: 3}
 --- !u!1001 &1835326589

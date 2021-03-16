@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Player : Character
 {
+    private Quaternion NullRotation = Quaternion.Euler(0f,0f,0f);
+    private Quaternion BackRotation = Quaternion.Euler(0f,180f,0f);
     private Vector3 startPosition;
     const float NormalizeSpeed = 10f;
     [SerializeField]private float[] speed = {0f, 0.06f, 0.1f};
@@ -77,9 +79,11 @@ public class Player : Character
 
         if (Input.GetKey(KeyCode.A)){
             this.Move(Vector3.left);
+            transform.rotation = BackRotation;
         }
         else if (Input.GetKey(KeyCode.D)){
             this.Move(Vector3.right);
+            transform.rotation = NullRotation;
         }
         else{
             this.isStopped = true;

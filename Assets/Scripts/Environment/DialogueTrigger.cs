@@ -12,7 +12,20 @@ public class DialogueTrigger : MonoBehaviour, IDeserializable, IDestroyAndThen
   private bool clickDelay = false;
   private Player player;
   public GameObject spawnOnDestroy;
+  public GameObject[] activateOnDestroy;
   public bool takePhone = false;
+  public bool startDisabled = false;
+
+    void Start() {
+      if(startDisabled) {
+          StartCoroutine("DelayedDisabling", 0.5f);
+      }
+    }
+
+    IEnumerator DelayedDisabling(float delay){
+      yield return new WaitForSeconds(delay);
+      this.gameObject.SetActive(false);
+    }
 
 
     void OnTriggerEnter2D(Collider2D col){
@@ -99,6 +112,9 @@ public class DialogueTrigger : MonoBehaviour, IDeserializable, IDestroyAndThen
     player.GetComponent<Character>().SetAnimator("phone", false);
     if(this.spawnOnDestroy != null){
       Instantiate(this.spawnOnDestroy, this.transform.parent);
+    }
+    foreach(var obj in this.activateOnDestroy) {
+      obj.SetActive(true);
     }
     Destroy(this.gameObject);
   }
