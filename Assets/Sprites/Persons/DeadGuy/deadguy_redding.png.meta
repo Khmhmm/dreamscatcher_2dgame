@@ -1,0 +1,405 @@
+fileFormatVersion: 2
+guid: 32456f267f1ac2143bd98df22cd202de
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5080907070705579744
+    second: deadguy_redding_0
+  - first:
+      213: 309868579963124475
+    second: deadguy_redding_1
+  - first:
+      213: -6346775633408792946
+    second: deadguy_redding_2
+  - first:
+      213: -3383709999877700394
+    second: deadguy_redding_3
+  - first:
+      213: 7409077605035891966
+    second: deadguy_redding_4
+  - first:
+      213: 7464837387487527955
+    second: deadguy_redding_5
+  - first:
+      213: 312109659097814588
+    second: deadguy_redding_6
+  - first:
+      213: -9001288252282212358
+    second: deadguy_redding_7
+  - first:
+      213: 1296570514659748930
+    second: deadguy_redding_8
+  - first:
+      213: -4875854246131855788
+    second: deadguy_redding_9
+  - first:
+      213: -7281897873483715810
+    second: deadguy_redding_10
+  - first:
+      213: 6775308068057518725
+    second: deadguy_redding_11
+  - first:
+      213: -8299721867713260283
+    second: deadguy_redding_12
+  - first:
+      213: 4237824205661491434
+    second: deadguy_redding_13
+  - first:
+      213: -7428359392625956305
+    second: deadguy_redding_14
+  - first:
+      213: -6006378552310818829
+    second: deadguy_redding_15
+  - first:
+      213: -6338144243825237825
+    second: deadguy_redding_16
+  - first:
+      213: 6388821801483287709
+    second: deadguy_redding_17
+  - first:
+      213: -5066596921344119756
+    second: deadguy_redding_18
+  - first:
+      213: -375974622278558654
+    second: deadguy_redding_19
+  - first:
+      213: 851221832411394911
+    second: deadguy_redding_20
+  - first:
+      213: -778861175659305580
+    second: deadguy_redding_21
+  - first:
+      213: -738774116006818535
+    second: deadguy_redding_22
+  - first:
+      213: -2107447101521409909
+    second: deadguy_redding_23
+  - first:
+      213: -8698469709730800375
+    second: deadguy_redding_24
+  - first:
+      213: -2291809811665269190
+    second: deadguy_redding_25
+  - first:
+      213: -1587140873228948041
+    second: deadguy_redding_26
+  - first:
+      213: 6104267565760802416
+    second: deadguy_redding_27
+  - first:
+      213: 3530722418133624060
+    second: deadguy_redding_28
+  - first:
+      213: -2811333629143448812
+    second: deadguy_redding_29
+  - first:
+      213: 2514945056742811704
+    second: deadguy_redding_30
+  - first:
+      213: 8801310520091427203
+    second: deadguy_redding_31
+  - first:
+      213: 8935343099806067777
+    second: deadguy_redding_32
+  - first:
+      213: 6027236962978247060
+    second: deadguy_redding_33
+  - first:
+      213: -9005601914622558329
+    second: deadguy_redding_34
+  - first:
+      213: 6317456609235919005
+    second: deadguy_redding_35
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: deadguy_redding_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e63d2e9f02038640800000000000000
+      internalID: 5080907070705579744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deadguy_redding_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 896
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfab1cbe4dfdc4400800000000000000
+      internalID: 309868579963124475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deadguy_redding_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8660952039bbe7a0800000000000000
+      internalID: -6346775633408792946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deadguy_redding_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d44a5acea5aa01d0800000000000000
+      internalID: -3383709999877700394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deadguy_redding_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efc5779a3d452d660800000000000000
+      internalID: 7409077605035891966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deadguy_redding_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 314cf33bd0e689760800000000000000
+      internalID: 7464837387487527955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deadguy_redding_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c365e71d416d45400800000000000000
+      internalID: 312109659097814588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deadguy_redding_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aff62d18600051380800000000000000
+      internalID: -9001288252282212358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deadguy_redding_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24c2a8873085ef110800000000000000
+      internalID: 1296570514659748930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
