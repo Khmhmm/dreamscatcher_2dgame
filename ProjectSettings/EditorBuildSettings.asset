@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: c7bd97f6bc2d59d4d9594c44934e7533
   - enabled: 1
+    path: Assets/Scenes/Settings.unity
+    guid: 8b02f880e73be4545ae335ab04fca76d
+  - enabled: 1
     path: Assets/Scenes/ThoughtsBeforeForest.unity
     guid: da9ed590f3b36504b8eb86a4a722499a
   - enabled: 1
@@ -24,9 +27,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Flat/FirstFlat.unity
     guid: 9cfca76306f56f14c804df6d8edfeb2c
   - enabled: 1
+    path: Assets/Scenes/ThoughtsBeforeOffice.unity
+    guid: 31d464fcfc996f549b5d63b1f61514f9
+  - enabled: 1
     path: Assets/Scenes/ToBeContinued.unity
     guid: 21b0ed40433f79d4a89225afa5d6f887
-  - enabled: 1
-    path: Assets/Scenes/Settings.unity
-    guid: 8b02f880e73be4545ae335ab04fca76d
   m_configObjects: {}

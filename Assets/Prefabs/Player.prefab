@@ -90,6 +90,7 @@ Light:
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!1 &3207570381753070136
@@ -355,7 +356,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3207570382829997824}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.57, y: 4.8, z: -6}
+  m_LocalPosition: {x: 2.3, y: 4.8, z: -6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3207570382342557704}
@@ -510,12 +511,28 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7187155762258265868, guid: d72afb5ded2416d29afb1b77da9e9c99, type: 3}
-      propertyPath: speed.Array.size
-      value: 3
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 3207570382829997826}
+    - target: {fileID: 7187155762258265868, guid: d72afb5ded2416d29afb1b77da9e9c99, type: 3}
+      propertyPath: guiH
+      value: 60
       objectReference: {fileID: 0}
+    - target: {fileID: 7187155762258265868, guid: d72afb5ded2416d29afb1b77da9e9c99, type: 3}
+      propertyPath: guiW
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 7187155762258265868, guid: d72afb5ded2416d29afb1b77da9e9c99, type: 3}
+      propertyPath: skin
+      value: 
+      objectReference: {fileID: 11400000, guid: 1e425da7c8c74f843b7408fdad36b63b, type: 2}
     - target: {fileID: 7187155762258265868, guid: d72afb5ded2416d29afb1b77da9e9c99, type: 3}
       propertyPath: speed
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7187155762258265868, guid: d72afb5ded2416d29afb1b77da9e9c99, type: 3}
+      propertyPath: speed.Array.size
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7187155762258265868, guid: d72afb5ded2416d29afb1b77da9e9c99, type: 3}
       propertyPath: speed.Array.data[1]
@@ -528,22 +545,6 @@ PrefabInstance:
     - target: {fileID: 7187155762258265868, guid: d72afb5ded2416d29afb1b77da9e9c99, type: 3}
       propertyPath: defaultAnimatorSpeed
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7187155762258265868, guid: d72afb5ded2416d29afb1b77da9e9c99, type: 3}
-      propertyPath: skin
-      value: 
-      objectReference: {fileID: 11400000, guid: 1e425da7c8c74f843b7408fdad36b63b, type: 2}
-    - target: {fileID: 7187155762258265868, guid: d72afb5ded2416d29afb1b77da9e9c99, type: 3}
-      propertyPath: cam
-      value: 
-      objectReference: {fileID: 3207570382829997826}
-    - target: {fileID: 7187155762258265868, guid: d72afb5ded2416d29afb1b77da9e9c99, type: 3}
-      propertyPath: guiW
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 7187155762258265868, guid: d72afb5ded2416d29afb1b77da9e9c99, type: 3}
-      propertyPath: guiH
-      value: 60
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -2319737996691834521, guid: d72afb5ded2416d29afb1b77da9e9c99, type: 3}
