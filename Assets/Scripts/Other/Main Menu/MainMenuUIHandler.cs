@@ -12,14 +12,21 @@ using UnityEngine.SceneManagement;
 public class MainMenuUIHandler : Deser
 {
     MetaGameData gameData;
+    public GameObject musicObject;
 
     protected void Start(){
-      gameData = transform.GetComponentInChildren<MetaGameData>();
+      if (SceneManager.GetActiveScene().name == "Menu"){
+        gameData = transform.GetComponentInChildren<MetaGameData>();
+      }
 
       // Needed when you go to main menu from another scene with already setted game data
       if(GameObject.FindGameObjectsWithTag("GameData").Length > 1){
-        Destroy(gameData.gameObject);
+        if (SceneManager.GetActiveScene().name == "Menu"){
+          Destroy(gameData.gameObject);
+          Destroy(musicObject);
+        }
         gameData = GameObject.FindWithTag("GameData").GetComponent<MetaGameData>();
+        musicObject = GameObject.FindWithTag("MenuAudio");
         return;
       }
 
@@ -33,10 +40,13 @@ public class MainMenuUIHandler : Deser
       finally{
         gameData.transform.parent = null;
         DontDestroyOnLoad(gameData.gameObject);
+        DontDestroyOnLoad(musicObject);
       }
+
     }
 
     public void ButtonPlay(){
+      Destroy(musicObject);
       SceneManager.LoadScene(gameData.lastLevel);
     }
 

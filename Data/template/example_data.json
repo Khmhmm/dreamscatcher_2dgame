@@ -1,0 +1,31 @@
+{
+    "map": [
+        {
+            "Key": "initialforestevil41289334e89scdsL",
+            "Value": "tmp"
+        },
+        {
+            "Key": "nextforestevil41289334e89scdsL",
+            "Value": "tmp"
+        },
+        {
+            "Key": "EmotionTriggerax152dsa231L",
+            "Value": "tmp"
+        },
+        {
+            "Key": "DialogueTriggerfasdjfjs1Lw12",
+            "Value": "PlayerInstance:Hi;Talker:Hello"
+        },
+        {
+            "key": "5pg48oseq0y2jbx3tkwavcizr6d1m9l7",
+            "Value": "PlayerInstance:Hi there;Talker:Hello;PlayerInstance:уче"
+        },
+        {
+            "key": "01xzjadhvowynm4uqkegbr236c5s87t9",
+            "Value": "Александр Морфеев, в иду в сто первую. Запишите, пожалуйста."
+        }
+    ]
+}
+
+DialogueTriggerfasdjfjs1Lw12
+EmotionTriggerax152dsa231L

@@ -29,16 +29,20 @@ public class DialogueTrigger : MonoBehaviour, IDeserializable, IDestroyAndThen
 
 
     void OnTriggerEnter2D(Collider2D col){
-      var _player = col.transform.parent.GetComponentInChildren<Player>();
-      if(_player != null){
-        this.player = _player;
-        player.LockDialogue();
-        if(takePhone){
-          player.GetComponent<Character>().SetAnimator("phone", true);
+      try{
+        var _player = col.transform.parent.GetComponentInChildren<Player>();
+        if(_player != null){
+          this.player = _player;
+          player.LockDialogue();
+          if(takePhone){
+            player.GetComponent<Character>().SetAnimator("phone", true);
+          }
+          // we will increment this one by mouse button
+          idx = -1;
+          // Debug.Log("Started dialogue");
         }
-        // we will increment this one by mouse button
-        idx = -1;
-        Debug.Log("Started dialogue");
+      } catch (NullReferenceException _) {
+        return;
       }
     }
 
