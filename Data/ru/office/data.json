@@ -3,6 +3,14 @@
         {
             "Key": "DialogueTriggerfasdjfjs1Lw12",
             "Value": "PlayerInstance:Александр Морфеев, запишите пожалуйста;printingSecurity_0:Куда направляетесь?;PlayerInstance:В двести десятую. В офис \"Апрекс\".;printingSecurity_0:Проходите."
+        },
+	{
+            "Key": "EmotionTriggerax152dsa231L",
+            "Value": "Входа нет..."
+	},
+        {
+            "Key": "DialogueTrigger (1)fasdjfjs1Lw12",
+            "Value": "PlayerInstance:Как крепко спит.;PlayerInstance:Ну, посмотрим, что тебе явилось на рабочем месте..."
         }
     ]
 }

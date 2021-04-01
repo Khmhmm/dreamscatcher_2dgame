@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FloatingObject : MonoBehaviour, IDestroyable
+public class FloatingObject : MonoBehaviour, IDestroyable, IDestroyAndThen
 {
   private float signX = 1f, signY = 1f;
+  public GameObject nextScene;
+
     void Start()
     {
       StartCoroutine("RecursivelyMoveAndSwitchDirection");
@@ -22,5 +24,12 @@ public class FloatingObject : MonoBehaviour, IDestroyable
       }
       signY = -signY;
       StartCoroutine("RecursivelyMoveAndSwitchDirection");
+    }
+
+    void IDestroyAndThen.DestroyAndThen(){
+      if(this.nextScene != null){
+        Instantiate(this.nextScene, this.transform.parent);
+      }
+      Destroy(this.gameObject);
     }
 }
