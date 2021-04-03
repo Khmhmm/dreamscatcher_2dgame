@@ -108,6 +108,7 @@ public class Player : Character
         if (transform.position.y < -200f){
             transform.parent.position = startPosition;
             transform.parent.GetComponent<Rigidbody>().velocity = Vector3.zero;
+            this.GetComponent<Character>().InvokeShowText("?..");
         }
 
         if(Input.GetKey(KeyCode.Escape)){

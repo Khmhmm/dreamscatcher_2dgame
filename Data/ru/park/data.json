@@ -1,0 +1,16 @@
+{
+    "map": [
+        {
+            "Key": "DialogueTriggerfasdjfjs1Lw12",
+            "Value": "PlayerInstance:Ещё один кошмар...;parkevil:Квартира, от которой тошнит.;parkevil:Озноб и жар, шум из-за стен.;parkevil:Она ненавидит свою квартиру.;parkevil:Больше чем любое другое место."
+        },
+        {
+            "Key": "DialogueTrigger (1)fasdjfjs1Lw12",
+            "Value": "parkevil (1):Только в парке спокойно.;parkevil (1):Теплое солнце греет колени.;parkevil (1):И невкусное кофе из автомата.;parkevil (1):Вот и вся радость за день.;parkevil (1):Она пришла сюда после работы.;parkevil (1):Не повезло."
+        },
+	{
+	    "Key": "DialogueTrigger (2)fasdjfjs1Lw12",
+	    "Value": "PlayerInstance:Значит, она забыла свой стаканчик...;PlayerInstance:...в тот день, когда встретила этого козла.;PlayerInstance:Тебе тут не место."
+	}
+    ]
+}

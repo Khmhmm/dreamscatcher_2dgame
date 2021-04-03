@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System;
 using UnityEngine;
 
 public class Enemy : Character, IDeserializable, IDestroyable{
@@ -13,7 +14,9 @@ public class Enemy : Character, IDeserializable, IDestroyable{
     public string text = "";
 
     void Start(){
-        activationTrigger = this.GetComponents<BoxCollider>().ToList<BoxCollider>().Where( x => x.isTrigger ).ToList()[0];
+        try{
+          activationTrigger = this.GetComponents<BoxCollider>().ToList<BoxCollider>().Where( x => x.isTrigger ).ToList()[0];
+        } catch(Exception _){}
         base.Start();
     }
 
