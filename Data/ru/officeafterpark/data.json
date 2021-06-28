@@ -1,0 +1,16 @@
+{
+    "map": [
+        {
+            "Key": "DialogueTriggerfasdjfjs1Lw12",
+            "Value": "Talker:Ну что, получилось?;PlayerInstance:Да.;Talker:Ты домой?;PlayerInstance:Да.;Talker:Напиши, как доедешь.;PlayerInstance:Это еще зачем?;Talker:Напиши.;PlayerInstance:Ладно."
+        },
+	{
+            "Key": "EmotionTriggerax152dsa231L",
+            "Value": "Входа нет..."
+	},
+        {
+            "Key": "DialogueTrigger (1)fasdjfjs1Lw12",
+            "Value": "OfficeWoman:Ой, простите. Я, кажется, задержалась сегодня...;OfficeWoman:Вы из охраны?;PlayerInstance:Да, вроде того.;PlayerInstance:Ничего страшного, идите домой.;PlayerInstance:До свидания.;OfficeWoman:До свидания..."
+        }
+    ]
+}

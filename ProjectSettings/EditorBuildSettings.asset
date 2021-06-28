@@ -33,6 +33,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Park.unity
     guid: c951ad8bff060334783348d4cf40f200
   - enabled: 1
+    path: Assets/Scenes/OfficeAfterPark.unity
+    guid: 156fd7024df6bf5439614acd1bad331f
+  - enabled: 1
+    path: Assets/Scenes/Flat/SecondFlat.unity
+    guid: 5d8a4f19943134b479cbccd04a808dfc
+  - enabled: 1
     path: Assets/Scenes/ToBeContinued.unity
     guid: 21b0ed40433f79d4a89225afa5d6f887
   m_configObjects: {}
