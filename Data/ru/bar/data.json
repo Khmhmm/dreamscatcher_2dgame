@@ -1,0 +1,20 @@
+{
+    "map": [
+        {
+        "Key": "EmotionTriggerax152dsa231L",
+        "Value": "Ну и название. В такое место пойдёт только ненормальный."
+        },
+        {
+        "Key": "EmotionTrigger (1)ax152dsa231L",
+        "Value": "Что только не пишут на заборах"
+        },
+        {
+        "Key": "YuliaTriggerfasdjfjs1Lw12",
+        "Value": "Yulia:Привет.;PlayerInstance:...;Yulia:Сумасшедшая ночь, да?;PlayerInstance:Почему сумасшедшая?;Yulia:Не знаю. Хотя бы потому, что луны не видно.;PlayerInstance:А вы, простите, кто?;Yulia:Я? Просто друг.;PlayerInstance:Хех, неплохой приёмчик.;Yulia:Угу. Я тут ненадолго,;Yulia:но могу помочь бесплатным советом.;Yulia:Интересует?;PlayerInstance:Ну... пожалуй.;Yulia:Слушаю.;PlayerInstance:Долгое время от одного человека скрывали правду.;PlayerInstance:Которую, вроде как, он и сам знает.;PlayerInstance:Но не помнит.;PlayerInstance:Стоит ли ему рассказать?;Yulia:Стоит.;Yulia:Знаешь, каждую ночь я плачу;Yulia:и не понимаю из-за чего.;Yulia:Потому что чувствую, что меня где-то ждут.;Yulia:Но не знаю, кто и где.;PlayerInstance:Вот как.;Yulia:Да уж. Ну что ж, торопись спасать мир.;Yulia:Или чем ты там занимаешься.;PlayerInstance:Вообще-то, я искал бар.;Yulia:А-а, понимаю. Ты, видимо, студент.;PlayerInstance:Да.;Yulia:Я не местная, подсказать не могу.;PlayerInstance:Что ж, ладно. Пока..?;Yulia:Пока. Спасибо, что поболтал.;PlayerInstance: Спасибо за совет.;Yulia: Всегда пожалуйста."
+        },
+        {
+        "Key": "DialogueTriggerfasdjfjs1Lw12",
+        "Value": "PlayerInstance:О, привет.;Bargirl:?..;PlayerInstance:Ты чего одна, сейчас будет два.;Bargirl:Ты не похож на парня, который так говорит.;PlayerInstance:Мда уж.;PlayerInstance:Просто не знал, что еще сказать.;Bargirl:Зачем тебе со мной говорить?;PlayerInstance:Кажется, твоя жизнь движется куда-то не туда.;PlayerInstance:Твоя подруга Даша беспокоится.;Bargirl:Подруга?Нет у меня никаких...;Bargirl:А, ты про тот чатик.;Bargirl:Для жертв изнасилования.;Bargirl:Я думала, там все анонимно.;PlayerInstance:Я не знаю твоего имени.;PlayerInstance:Да и вообще я не совсем говорить пришёл.;Bargirl:А что тогда?;PlayerInstance:Даша говорила, ты веришь в снохождение.;Bargirl:Ну, допустим.;PlayerInstance:Ну, веришь или нет;PlayerInstance:а я хожу по снам.;Bargirl:Это типо... как?;PlayerInstance:Ты все равно забудешь этот разговор;PlayerInstance:Просто закрой глаза на пару минут.;Bargirl:Эм... ну...;Bargirl:Ладно, раз уж ты знакомый Даши;Bargirl:наверное, ты не хочешь ничего плохого сделать.;PlayerInstance:...;PlayerInstance:(а хорошо ли, что я лишаю тебя воспоминаний?);PlayerInstance:(пусть даже таких);PlayerInstance:(с другой стороны, она поверила первому встречному на слово);PlayerInstance:(должно быть она и правда в отчаянии)"
+        },
+    ]
+}

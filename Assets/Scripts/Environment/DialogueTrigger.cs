@@ -15,6 +15,7 @@ public class DialogueTrigger : MonoBehaviour, IDeserializable, IDestroyAndThen
   public GameObject[] activateOnDestroy;
   public bool takePhone = false;
   public bool startDisabled = false;
+  public GameObject[] hideOnStart;
 
     void Start() {
       if(startDisabled) {
@@ -24,6 +25,9 @@ public class DialogueTrigger : MonoBehaviour, IDeserializable, IDestroyAndThen
 
     IEnumerator DelayedDisabling(float delay){
       yield return new WaitForSeconds(delay);
+      foreach(var obj in hideOnStart){
+          obj.SetActive(false);
+      }
       this.gameObject.SetActive(false);
     }
 
