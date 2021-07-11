@@ -420,7 +420,7 @@ PrefabInstance:
     - target: {fileID: 8791986028195895337, guid: 54c12190756681d4594c32d4cb8da4ca, type: 3}
       propertyPath: spawnOnDestroy
       value: 
-      objectReference: {fileID: 3887547339921965264, guid: 59a674deefeaada44b90c7bf04c9d2dd, type: 3}
+      objectReference: {fileID: 8040534813840133062, guid: 34a12a54b9b50884697638011ed4922a, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54c12190756681d4594c32d4cb8da4ca, type: 3}
 --- !u!4 &124948121 stripped
