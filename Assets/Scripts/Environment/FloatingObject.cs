@@ -6,6 +6,7 @@ public class FloatingObject : MonoBehaviour, IDestroyable, IDestroyAndThen
 {
   private float signX = 1f, signY = 1f;
   public GameObject nextScene;
+  public GameObject[] activateOnDestroy;
 
     void Start()
     {
@@ -27,9 +28,12 @@ public class FloatingObject : MonoBehaviour, IDestroyable, IDestroyAndThen
     }
 
     void IDestroyAndThen.DestroyAndThen(){
-      if(this.nextScene != null){
-        Instantiate(this.nextScene, this.transform.parent);
-      }
-      Destroy(this.gameObject);
+        foreach(var obj in this.activateOnDestroy) {
+            obj.SetActive(true);
+        }
+        if(this.nextScene != null){
+            Instantiate(this.nextScene, this.transform.parent);
+        }
+        Destroy(this.gameObject);
     }
 }

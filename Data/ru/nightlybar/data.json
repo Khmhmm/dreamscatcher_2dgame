@@ -1,0 +1,24 @@
+{
+    "map": [
+        {
+        "Key": "EmotionTriggerax152dsa231L",
+        "Value": "Это какой-то... бокал?"
+        },
+        {
+        "Key": "DialogueTriggerfasdjfjs1Lw12",
+        "Value": "PlayerInstance:Вот, значит, как ты развлекаешься.;PlayerInstance:Посещаешь несколько баров за ночь;PlayerInstance:Но воспоминание еще не закончилось.;PlayerInstance:Наверное, она встретила его когда выходила после попойки.;PlayerInstance:Может, я шёл не туда?"
+        },
+	{
+	"Key":"forestevil41289334e89scdsL",
+	"Value":"Вниз по знакомой улице."
+	},
+	{
+	"Key":"forestevil (1)41289334e89scdsL",
+	"Value":"Всего одна ночь чтобы раствориться в бездне."
+	},
+        {
+        "Key": "DialogueTrigger (1)fasdjfjs1Lw12",
+	"Value": "PlayerInstance:Кажется, я зашёл далековато.;Talker:Неужели ты правда думаешь, что после такого стоит жить?;Talker:После того как меня...;Talker: использовали как вещь?;PlayerInstance:Да.;PlayerInstance:Разве правильно позволять кому-то;PlayerInstance:распоряжаться своей жизнью?;Talker: Я ведь не смогу жить как раньше;PlayerInstance:Я тоже жалею о том, что было раньше.;PlayerInstance:Но прошлого не вернешь...;PlayerInstance:и не исправишь."
+	}
+    ]
+}
