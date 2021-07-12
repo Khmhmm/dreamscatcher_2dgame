@@ -1,0 +1,12 @@
+{"map":[
+	{"Key":"DialogueTriggerfasdjfjs1Lw12","Value":"PlayerInstance:Привет.;Talker:Привет.;PlayerInstance:Дело сделано.;Talker:Ну.. когда встретимся?;PlayerInstance:Встретимся?;Talker:Ты ведь просил апельсин.;PlayerInstance:А, да...;PlayerInstance:Давай, когда тебе удобнее.;PlayerInstance:Я из дома не очень люблю выходить.;PlayerInstance:Так что лучше на перерыве в универе.;Talker:Хорошо, спишемся тогда.;PlayerInstance:Угу.;PlayerInstance:Добрых снов.;Talker:И тебе добрых снов!"}, 
+	{"Key":"EmotionTriggerax152dsa231L","Value":"С новой люстрой как-то поуютнее."},
+	{
+		"Key":"DialogueTrigger(1)fasdjfjs1Lw12",
+		"Value":"PlayerInstance:Нет больше снов."
+	},
+	{
+		"Key":"DialogueTrigger(2)fasdjfjs1Lw12",
+		"Value":"PlayerInstance:И зачем я ляпнул про этот апельсин.;PlayerInstance:Она еще и деньги на меня потратила.;PlayerInstance:Ладно, раз уж такое дело...;PlayerInstance:завтра я всё ей расскажу."
+	}
+]}
