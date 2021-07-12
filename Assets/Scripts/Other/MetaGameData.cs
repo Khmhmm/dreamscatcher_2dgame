@@ -9,8 +9,8 @@ using UnityEngine;
 
 public class MetaGameData : MonoBehaviour, IDeserializable
 {
-  public string lang = "en";
-  public int lastLevel = 2;
+  public string lang = "ru";
+  public int lastLevel = 3;
   public float volume = 1f;
   private string path = "." + Path.DirectorySeparatorChar + "Data" + Path.DirectorySeparatorChar + "savegame.json";
 

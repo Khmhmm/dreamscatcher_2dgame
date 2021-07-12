@@ -21,7 +21,7 @@ public abstract class Character: MonoBehaviour{
       }
     }
 
-    public void ViewText(Vector3 screenPosition, float guiW, float guiH, string shownText){
+    void ViewText(Vector3 screenPosition, float guiW, float guiH, string shownText){
       GUI.Box(new Rect(screenPosition.x + guiW/2f, Screen.height - (screenPosition.y*1.5f + guiH), guiW + shownText.Length * 7.5f + 20f, guiH), shownText);
     }
 

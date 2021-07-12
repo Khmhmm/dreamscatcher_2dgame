@@ -2,14 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EmotionTrigger : MonoBehaviour, IDeserializable
+public class EmotionTrigger : MonoBehaviour, IDeserializable, IDestroyAndThen
 {
     public string textToSpeech;
+    public GameObject[] activateOnDestroy;
 
     void OnTriggerEnter2D(Collider2D col){
       if (col.gameObject.tag == "Player") {
         col.transform.parent.GetComponentInChildren<Player>().StartCoroutine("ShowText", this.textToSpeech);
-        Destroy(this.gameObject);
+        this.GetComponent<IDestroyAndThen>().DestroyAndThen();
       }
     }
 
@@ -21,4 +22,12 @@ public class EmotionTrigger : MonoBehaviour, IDeserializable
     void IDeserializable.SetProperty(string property){
       this.textToSpeech = property;
     }
+
+     void IDestroyAndThen.DestroyAndThen(){
+         foreach(var obj in this.activateOnDestroy) {
+           obj.SetActive(true);
+         }
+
+         Destroy(this.gameObject);
+     }
 }

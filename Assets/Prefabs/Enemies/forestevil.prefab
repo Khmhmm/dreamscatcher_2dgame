@@ -48,6 +48,7 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -118,7 +119,7 @@ Rigidbody:
   m_Mass: 5000
   m_Drag: 5
   m_AngularDrag: 500
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 120
@@ -134,8 +135,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.22306895, y: 0.31729597, z: 20}
-  m_Center: {x: -0.0060327766, y: -0.094850264, z: 0}
+  m_Size: {x: 0.22306895, y: 0.28419176, z: 19.99999}
+  m_Center: {x: -0.0060327766, y: -0.078298174, z: 0}
 --- !u!114 &2548764234310641787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,8 +150,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skin: {fileID: 11400000, guid: 1e425da7c8c74f843b7408fdad36b63b, type: 2}
-  guiW: 250
-  guiH: 250
+  guiW: 25
+  guiH: 25
   anim: {fileID: 2548764234310641790}
   text: 
 --- !u!65 &1462682061
@@ -256,5 +257,6 @@ Light:
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0

@@ -43,7 +43,13 @@ public class Destroyer : MonoBehaviour{
         var gObj = col.gameObject;
         Debug.Log(gObj.name);
         if(gObj.GetComponent<IDestroyable>() != null && isBlockAffects) {
-            Destroy(gObj);
+            var then = gObj.GetComponent<IDestroyAndThen>();
+            if (then != null) {
+              then.DestroyAndThen();
+            }
+            else{
+              Destroy(gObj);
+            }
         }
     }
 

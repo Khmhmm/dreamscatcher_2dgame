@@ -1,0 +1,8 @@
+{"map":[
+	{"Key":"DialogueTriggerfasdjfjs1Lw12","Value":"PlayerInstance:Я дома.;Talker:Хорошо. Значит, осталась только одна?;PlayerInstance:Да.;Talker:И куда ты пойдёшь?;PlayerInstance:Ну, раз уж и ты не знаешь, где она обычно бывает...;PlayerInstance:видно, придётся поспрашивать.;Talker:Кажется, она обычно заходит в бар в центре...;PlayerInstance:В центре много баров.;Talker:Ну да...;Talker:Слушай, ты так и не сказал, сколько хочешь за старания;PlayerInstance:Денег, что ли?;Talker:Да.;PlayerInstance: Считай, что я возвращаю долг.;Talker:Но ты ведь ничего не занимал, так не пойдёт;Talker:Подумай, что хочешь.;PlayerInstance:Ладно, пусть будет апельсин.;PlayerInstance:Сто лет их не ел.;PlayerInstance:Ладно, я пойду спать.;PlayerInstance:Завтра на пары.;Talker:Спокойной ночи.;PlayerInstance:И тебе."}, 
+	{"Key":"EmotionTriggerax152dsa231L","Value":"А тут все по-старому. Обои, что ли, сменить..."},
+	{
+		"Key":"DialogueTrigger(1)fasdjfjs1Lw12",
+		"Value":"PlayerInstance:Рано или поздно придётся ей сказать.;PlayerInstance:Я не смогу вечно скрывать свои ошибки.;PlayerInstance:Бедная девочка."
+	}
+]}
