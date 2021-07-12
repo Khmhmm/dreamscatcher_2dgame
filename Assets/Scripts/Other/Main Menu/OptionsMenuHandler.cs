@@ -22,6 +22,6 @@ public class OptionsMenuHandler : Deser
 
     public void Back(){
       metaGameData.GetComponent<MetaGameData>().SaveGame(this);
-      SceneManager.LoadScene(0);
+      SceneManager.LoadScene(1);
     }
 }

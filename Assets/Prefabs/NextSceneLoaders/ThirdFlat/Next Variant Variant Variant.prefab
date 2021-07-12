@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &7745216480159866816
+--- !u!1001 &4528506767127036386
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -57,7 +57,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4448178638875623701, guid: 59a674deefeaada44b90c7bf04c9d2dd, type: 3}
       propertyPath: nextSceneIdx
-      value: 13
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59a674deefeaada44b90c7bf04c9d2dd, type: 3}

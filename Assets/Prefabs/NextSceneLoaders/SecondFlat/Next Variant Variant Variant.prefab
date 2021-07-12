@@ -53,11 +53,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3887547339921965264, guid: 59a674deefeaada44b90c7bf04c9d2dd, type: 3}
       propertyPath: m_Name
-      value: Next Variant Variant
+      value: Next Variant Variant Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4448178638875623701, guid: 59a674deefeaada44b90c7bf04c9d2dd, type: 3}
       propertyPath: nextSceneIdx
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59a674deefeaada44b90c7bf04c9d2dd, type: 3}
